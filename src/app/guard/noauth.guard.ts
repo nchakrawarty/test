@@ -8,12 +8,12 @@ export class NoauthGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (localStorage.getItem('currentUser')) {
-      // logged in so return true
+      //not logged in so return false
       this.router.navigate(['/dashboard']);
       return false;
     }
 
-    // not logged in so redirect to login page with the return url
+    // logged in so redirect to return url
     // this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
     return true;
   }
