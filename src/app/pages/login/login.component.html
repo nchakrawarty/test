@@ -1,0 +1,46 @@
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/">Home</a>
+    <a class="nav-item nav-link" routerLink="/dashboard">Dashboard</a>
+    <a class="nav-item nav-link" routerLink="/register">Register</a>
+  </div>
+</nav> -->
+<div class="container">
+  <div class="login">
+    <div class="login__image">
+      <!-- <img src="../../../assets/images/imlogin.jpg"> -->
+    </div>
+    <div class="login__form">
+      <div class="logo">
+        <img src="../../../assets/images/name.jpg">
+      </div>
+      <div class="form">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <h2>Login</h2>
+          <p>Don't have an account yet?<span> <a class="nav-item nav-link" routerLink="/register">Sign Up</a></span>
+          </p>
+          <div>
+            <label for="email">
+              Email
+            </label>
+            <input id="email" type="email" formControlName="emailId">
+            <span class="error" *ngIf="!loginForm.get('emailId').valid && loginForm.get('emailId').touched">
+              Please enter valid EmailId!
+            </span>
+          </div>
+
+          <div>
+            <label for="password">
+              Password
+            </label>
+            <input id="password" type="password" formControlName="password">
+            <a class="nav-link forgot--password" routerLink="">Forgot password?</a>
+          </div>
+          <button class="button button--login" [disabled]="!loginForm.valid" type="submit">Login</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>

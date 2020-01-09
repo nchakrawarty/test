@@ -1,0 +1,105 @@
+@import '../../app.component.scss';
+
+.login {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 3%;
+  // padding: 10px;
+  // height: calc(100vh - 20px);
+  height: 100vh;
+
+    img {
+      width: 100%;
+    }
+
+    .login__image {
+      background-image: url(../../../assets/images/imlogin.jpg);
+      background-size: cover;
+      max-height: 100vh;
+    }
+
+    .logo {
+      position: absolute;
+      top: 5%;
+      width: 20%;
+    }
+
+    .login__form {
+      // margin-right: 10%;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      .form {
+        width: 100%;
+        margin-right: 10%;
+      }
+    }
+
+  .login__form span, .login__form a {
+    display: inline;
+    padding: 5px;
+  }
+
+  .login__form label {
+    min-width: 100px;
+      display: block;
+  }
+
+  .login__form input {
+    border: none;
+      border-bottom: 1px solid #f0f0f0;
+      padding: 10px 0px;
+      width: 100%;
+  }
+
+  .login__form div {
+    margin: 15px 0px;
+  }
+
+  .forgot--password {
+    font-size: 0.7rem;
+  }
+  #password {
+    margin-bottom: 10px;
+  }
+  .button--login {
+    background-color: #0099f9;
+  }
+
+  .error {
+    font-size: 0.7rem;
+    color: red;
+  }
+
+  input.ng-invalid.ng-touched {
+    border-bottom: 1px solid red;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .login {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+
+    .login__form {
+      margin-right: 0px;
+    }
+
+    .login__image {
+      display: none;
+  }
+  .logo {
+    width: 40%;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  a,p,span,input {
+    font-size: 0.9rem;
+  }
+}
+
+}

@@ -1,0 +1,54 @@
+@import '../../app.component.scss';
+
+
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  background: #f2f5fa;
+}
+
+.user {
+border: 1px solid #e2e2e2;
+background: #ffffff;
+margin: 2%;
+}
+
+.card {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  background: #f2f5fa;
+  font-family: arial;
+  position: relative;
+  top: calc(50vh - 170px);
+
+  img {
+    width: 140px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: -80px;
+  }
+
+  span {
+    font-size: 0.7rem;
+    color: #898989;
+    text-align: left;
+    display: block;
+  }
+
+  span.header {
+    font-size: 1rem;
+    color: #000000;
+  }
+
+  div {
+    margin: 0 50px;
+    padding: 5px 0;
+    position: relative;
+    top: -50px;
+  }
+}

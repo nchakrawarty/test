@@ -1,0 +1,26 @@
+@import '../../../app.component.scss';
+
+.nav-item {
+  display: inline;
+  padding: 10px;
+}
+
+.header {
+  background: #ffffff;
+    padding: 10px 10px 5px 10px;
+    border-bottom: 1px solid #e2e2e2;
+
+    .logo{
+      display: inline;
+    }
+
+    .logo img {
+      width: 175px;
+    }
+
+    .log {
+      float: right;
+      padding: 6px 10px;
+    }
+}
+

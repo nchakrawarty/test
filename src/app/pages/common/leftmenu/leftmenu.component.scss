@@ -1,0 +1,17 @@
+@import '../../../app.component.scss';
+
+.left {
+  height: calc(100vh - 60px);
+  background: #ffffff;
+  border-right: 1px solid #e2e2e2;
+}
+a.nav__item {
+  display: block;
+  text-decoration: none;
+  padding: 15px 2px 15px 10px;
+  color: #898989;
+
+}
+a.nav__item:hover {
+  color: #000000;
+}

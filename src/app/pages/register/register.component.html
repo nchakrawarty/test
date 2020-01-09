@@ -1,0 +1,73 @@
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/">Home</a>
+    <a class="nav-item nav-link" routerLink="/dashboard">Dashboard</a>
+    <a class="nav-item nav-link" routerLink="/login">Login</a>
+  </div>
+</nav> -->
+
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit(login.value)"> -->
+<div class="container">
+  <div class="register">
+    <div class="register__image">
+      <!-- <img src="../../../assets/images/imregister.jpg"> -->
+    </div>
+    <div class="register__form">
+      <div class="logo">
+        <img src="../../../assets/images/name.jpg">
+      </div>
+      <div class="form">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <h2>Register</h2>
+          <p>Already have an account?<span> <a class="nav-item nav-link" routerLink="/login">Login</a></span> </p>
+          <div class="form">
+            <label for="name">
+              Full Name
+            </label>
+            <input id="name" type="text" formControlName="name" placeholder="First and last name">
+            <span class="error" *ngIf="!registerForm.get('name').valid && registerForm.get('name').touched">
+              Please enter valid Name of Length greater than two!
+            </span>
+          </div>
+          <div>
+            <label for="email">
+              Email
+            </label>
+            <input id="email" type="email" formControlName="emailId" placeholder="Email address">
+            <span class="error" *ngIf="!registerForm.get('emailId').valid && registerForm.get('emailId').touched">
+              Please enter valid EmailId!
+            </span>
+          </div>
+          <div>
+            <label for="password">
+              Password
+            </label>
+            <input id="password" type="password" formControlName="password" placeholder="Enter your password">
+            <span class="error" *ngIf="!registerForm.get('password').valid && registerForm.get('password').touched">
+              Please enter valid Password of length greater than 8!
+            </span>
+          </div>
+          <div>
+            <label for="gender">
+              Gender
+            </label>
+            <!-- <input id="gender" type="text" formControlName="gender"> -->
+            <select formControlName="gender">
+              <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+            </select>
+          </div>
+          <div>
+            <label for="age">
+              Age
+            </label>
+            <input id="age" type="number" formControlName="age" placeholder="Age in numbers">
+            <span class="error" *ngIf="!registerForm.get('age').valid && registerForm.get('age').touched">
+              Please enter valid Age!
+            </span>
+          </div>
+          <button class="button button--register" [disabled]="!registerForm.valid" type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

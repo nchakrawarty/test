@@ -1,0 +1,105 @@
+@import '../../app.component.scss';
+
+
+.register {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 3%;
+  // padding: 10px;
+  // height: calc(100vh - 20px);
+  height: 100vh;
+
+  img {
+    width: 100%;
+  }
+
+  .register__form {
+    // margin-right: 10%;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    .form {
+      width: 100%;
+      margin-right: 10%;
+    }
+  }
+
+ .register__form span, .register__form a {
+  display: inline;
+  padding: 5px;
+  }
+
+.register__form label {
+  min-width: 100px;
+    display: block;
+  }
+
+.register__form input {
+  border: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 0px;
+    width: 100%;
+  }
+
+.register__form div {
+  margin: 15px 0px;
+  }
+
+.register__form select {
+  border: none;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+  }
+
+.button--register {
+  background-color: #0099f9;
+  }
+
+  .register__image {
+    background-image: url(../../../assets/images/imregister.jpg);
+    background-size: cover;
+    max-height: 100vh;
+  }
+  .logo {
+    position: absolute;
+    top: 5%;
+    width: 20%;
+  }
+
+
+.error {
+  font-size: 0.7rem;
+  color: red;
+  }
+input.ng-invalid.ng-touched {
+  border-bottom: 1px solid red;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .register {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+
+    .register__form {
+      margin-right: 0px;
+    }
+    .register__image {
+      display: none;
+    }
+    .logo {
+      width: 40%;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+    a,p,span,input {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+
